@@ -1,7 +1,7 @@
 import './Hero.css'
-import arrow_btn from '../../assets/home/arrow_btn.png'
-import play_icon from '../../assets/home/play_icon.png'
-import pause_icon from '../../assets/home/pause_icon.png'
+import arrow_btn from '../../assets/inicio/arrow_btn.png'
+import play_icon from '../../assets/inicio/play_icon.png'
+import pause_icon from '../../assets/inicio/pause_icon.png'
 
 const Hero = ({heroData, heroCount, setHeroCount, playStatus, setPlayStatus}) => {
     return (
