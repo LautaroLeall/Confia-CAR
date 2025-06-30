@@ -1,0 +1,134 @@
+.home-container {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #333333, #ffffff);
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.3em;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr auto;
+    gap: 1.5rem;
+    background-color: rgb(200, 200, 200);
+    padding: 1rem 1.5rem;
+    border-radius: 2.5rem;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.8);
+    align-items: center;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #132d40;
+    margin-bottom: 0.4rem;
+    padding-left: 0.5rem;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon .input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--label-color);
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    border: 1px solid #132d40;
+    border-radius: 2.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 0.95rem;
+    color: #132d40;
+    padding: 0.5rem;
+}
+
+.input-group input[type="text"] {
+    padding-left: 2.5rem;
+    /* Espacio para el ícono */
+}
+
+.input-group input[type="date"] {
+    padding-left: 3rem;
+    /* Espacio para el ícono */
+    color-scheme: light;
+    /* Asegura que el picker de fecha sea claro */
+    cursor: pointer;
+}
+
+/* Estilo para el placeholder */
+.input-group input::placeholder {
+    color: #132d4060
+}
+
+/* Ocultar el ícono del calendario nativo */
+.input-group input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: end;
+    /* Alinea el botón a la derecha en la cuadrícula */
+}
+
+.search-button:hover {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.car-image-container {
+    margin-top: 3rem;
+}
+
+.car-image {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
