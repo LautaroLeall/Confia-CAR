@@ -4,7 +4,7 @@ const NavBar = () => {
     return (
         <div className='nav'>
             <div className='nav-logo'>
-                LautyGod
+                CONFIA CAR
             </div>
             <ul className="nav-menu">
                 <li>Home</li>
