@@ -16,7 +16,7 @@ const Hero = ({heroData, heroCount, setHeroCount, playStatus, setPlayStatus}) =>
             </div>
             <div className="hero-explore">
                 <p>
-                    Explore the features
+                    Explora las funciones
                 </p>
                 <img src={arrow_btn} alt="arrow" />
             </div>
@@ -28,7 +28,7 @@ const Hero = ({heroData, heroCount, setHeroCount, playStatus, setPlayStatus}) =>
                 </ul>
                 <div className="hero-play">
                     <img src={playStatus ? pause_icon : play_icon} alt="play" onClick={() => setPlayStatus(!playStatus)} />
-                    <p>See the video</p>
+                    <p>Ver el video</p>
                 </div>
             </div>
         </div>
