@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="content-wrapper">
-        <h1 className="title">COCHES EN ALQUILER</h1>
+        <h1 className="title">AUTOS EN ALQUILER</h1>
 
         <form className="search-form" onSubmit={handleSubmit}>
           <div className="input-group">

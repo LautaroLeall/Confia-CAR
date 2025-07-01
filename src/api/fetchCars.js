@@ -1,5 +1,6 @@
 import carsData from './carsData';
 
+// simula una API.
 const fetchCars = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
