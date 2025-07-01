@@ -56,10 +56,50 @@
     transform: scale(0.95);
 }
 
+.car-img-wrapper {
+    position: relative;
+    flex: 1 0 55%;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
 .car-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+.price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(170, 270, 170, 0.5);
+    padding: 4px 8px;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.card-inner {
+    flex: 1 0 45%;
+    padding-top: 0.5rem;
+}
+
+.text-description {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #132d4060;
+    width: 12rem;
+    transition: 0.5s;
+    justify-content: center;
+}
+
+.text-description:hover {
+    border: 1px solid #132d40;
+    border-radius: 50px;
+    background-color: #7a7a7a50;
+    transition: 0.5s;
+    transform: scale(1.1);
 }
 
 .blur-spot {

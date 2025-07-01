@@ -31,7 +31,7 @@ const Home = () => {
               <input
                 id="pickup-location"
                 type="text"
-                placeholder="Por favor seleccione la ubicación"
+                placeholder="Por favor seleccione la Ubi"
                 value={pickupLocation}
                 onChange={(e) => setPickupLocation(e.target.value)}
                 required
