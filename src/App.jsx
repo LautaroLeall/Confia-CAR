@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom';
 import Background from './components/Background/Background.jsx';
 import RoutesApp from './routes/routes';
 import Hero from './components/Hero/Hero.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import './index.css';
 
 const App = () => {
   const location = useLocation();
@@ -20,13 +22,17 @@ const App = () => {
     const interval = setInterval(() => {
       setHeroCount((count) => (count === 2 ? 0 : count + 1));
     }, 4000);
-
-    return () => clearInterval(interval); // Limpieza
+    return () => clearInterval(interval);
   }, []);
 
+  // Verificamos si estamos en una ruta que debe mostrar el footer
+  const showFooterRoutes = ["/home", "/cars", "/myBookings", "/contact"];
+  const shouldShowFooter = showFooterRoutes.includes(location.pathname);
+
   return (
-    <div>
+    <div className="app-container">
       <RoutesApp />
+
       {location.pathname === '/' && (
         <>
           <Background playStatus={playStatus} heroCount={heroCount} />
@@ -39,6 +45,8 @@ const App = () => {
           />
         </>
       )}
+
+      {shouldShowFooter && <Footer />}
     </div>
   );
 };
