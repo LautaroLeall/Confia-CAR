@@ -9,7 +9,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "New York",
         price: 300,
-        image: "../assets/cars/car_image1.png"
+        image: "../public/bmw-x5.png"
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 130,
-        image: "/cars/toyota-corolla.png"
+        image: "../public/corolla.png"
     },
     {
         id: 3,
@@ -33,19 +33,19 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 200,
-        image: "/cars/jeep-wrangler.png"
+        image: "../public/jeep-wrangler.png"
     },
     {
         id: 4,
-        name: "Ford Neo 6",
-        type: "Sedan",
+        name: "Ford Ranger",
+        type: "SUV",
         year: 2022,
-        seats: 2,
+        seats: 5,
         fuel: "Diesel",
         transmission: "Semi-Automatic",
         location: "Houston",
-        price: 209,
-        image: "/cars/ford-neo6.png"
+        price: 220,
+        image: "../public/ford-ranger.png"
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ const carsData = [
         transmission: "Manual",
         location: "Miami",
         price: 250,
-        image: "/cars/camaro.png"
+        image: "../public/camaro.png"
     },
     {
         id: 6,
@@ -69,7 +69,7 @@ const carsData = [
         transmission: "Automatic",
         location: "San Francisco",
         price: 280,
-        image: "/cars/tesla-model-s.png"
+        image: "../public/tesla-models.png"
     },
     {
         id: 7,
@@ -81,7 +81,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Chicago",
         price: 270,
-        image: "/cars/audi-q5.png"
+        image: "../public/audi-q5.png"
     }
 ];
 

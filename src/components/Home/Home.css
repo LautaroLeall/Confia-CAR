@@ -89,7 +89,9 @@
 
 /* Estilo para el placeholder */
 .input-group input::placeholder {
-    color: #132d4060
+    color: #132d4060;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
 /* Ocultar el ícono del calendario nativo */
