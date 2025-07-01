@@ -73,7 +73,7 @@ const Home = () => {
         </form>
 
         <div className="car-image-container">
-          <img src={carImage} alt="Silver luxury car" className="car-image" />
+          <img src={carImage} alt="Silver luxury car" className="image-car" />
         </div>
       </div>
     </div>

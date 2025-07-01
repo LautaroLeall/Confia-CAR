@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Navbar from '../components/NavBar/NavBar.jsx'
 import Home from '../components/Home/Home'
-import Cars from '../components/Cars/Cars'
+import Cars from '../components/Cars/CarCard.jsx'
 import MyBookings from '../components/MyBooks/MyBookings'
 import Contact from '../components/Contact/Contact'
 
