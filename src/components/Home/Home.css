@@ -3,7 +3,7 @@
     z-index: -1;
     top: 0;
     width: 100%;
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +21,7 @@
     font-weight: 600;
     color: #333;
     margin-bottom: 2rem;
+    margin-top: 7rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
     letter-spacing: 0.3em;
 }

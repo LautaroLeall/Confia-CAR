@@ -9,7 +9,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "New York",
         price: 300,
-        image: "/cars/bmw-x5.png"
+        image: "../assets/cars/car_image1.png"
     },
     {
         id: 2,

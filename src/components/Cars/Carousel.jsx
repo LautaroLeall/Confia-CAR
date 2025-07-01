@@ -1,36 +1,34 @@
-// src/components/Carousel/Carousel.jsx
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
-import carsData from "../../api/carsData";
-import CarCard from "../Cars/CarCard";
-import "./Carousel.css";
+// Carousel.jsx
+import React, { useState } from "react";
+import Card from "./Card";
+import "./styles.css";
 
-const Carousel = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % carsData.length);
-        }, 5000);
-        return () => clearInterval(timer);
-    }, []);
-
-    const visibleCars = () => {
-        const result = [];
-        for (let i = 0; i < 3; i++) {
-            const index = (currentIndex + i) % carsData.length;
-            result.push(carsData[index]);
-        }
-        return result;
-    };
+const Carousel = ({ cars }) => {
+    const [stop, setStop] = useState(false);
 
     return (
-        <div className="carousel-wrapper">
-            <motion.div className="carousel-track" whileHover={{ scale: 1.02 }}>
-                {visibleCars().map((car) => (
-                    <CarCard key={car.id} car={car} />
-                ))}
-            </motion.div>
+        <div className="container-carousel">
+            <div className="title">
+                <h1 className="title text-center">AUTOS DISPONIBLES</h1>
+            </div>
+            <div
+                className="carousel-wrapper"
+                onMouseEnter={() => setStop(true)}
+                onMouseLeave={() => setStop(false)}
+            >
+
+                <div
+                    className="carousel-inner d-flex gap-5"
+                    style={{
+                        animationPlayState: stop ? "paused" : "running",
+                        animationDuration: `${cars.length * 3}s`,
+                    }}
+                >
+                    {[...cars, ...cars].map((car, index) => (
+                        <Card key={index} car={car} />
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,0 +1,73 @@
+/* CAROUSEL */
+.container-carousel {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom, #333333, #ffffff);
+    height: 95vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.carousel-inner {
+    display: flex;
+    animation: scroll-left linear infinite;
+    height: 55vh;
+    width: max-content;
+    will-change: transform;
+}
+
+.carousel-wrapper:hover .carousel-inner {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* CARDS */
+.car-card {
+    position: relative;
+    width: 30rem;
+    height: 25rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+
+.car-card:hover {
+    transform: scale(0.95);
+}
+
+.car-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blur-spot {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(0, 123, 255, 1), transparent 60%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 1;
+}
