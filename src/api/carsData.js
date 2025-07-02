@@ -1,4 +1,3 @@
-// Simular Api data
 import bmwImage from '../assets/cars/bmw-x5.png';
 import corollaImage from '../assets/cars/corolla.png';
 import jeepImage from '../assets/cars/jeep-wrangler.png';
@@ -7,6 +6,7 @@ import camaroImage from '../assets/cars/camaro.png';
 import teslaImage from '../assets/cars/tesla-models.png';
 import audiImage from '../assets/cars/audi-q5.png';
 
+// Simular Api data
 const carsData = [
     {
         id: 1,
