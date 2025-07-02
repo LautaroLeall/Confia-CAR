@@ -1,10 +1,4 @@
-import bmwImage from '/public/bmw-x5.png';
-import corollaImage from '/public/corolla.png';
-import jeepImage from '/public/jeep-wrangler.png';
-import fordImage from '/public/ford-ranger.png';
-import camaroImage from '/public/camaro.png';
-import teslaImage from '/public/tesla-models.png';
-import audiImage from '/public/audi-q5.png';
+// Simular Api data
 
 const carsData = [
     {
@@ -17,7 +11,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "New York",
         price: 300,
-        image: bmwImage
+        image: "/public/bmw-x5.png"
     },
     {
         id: 2,
@@ -29,7 +23,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 130,
-        image: corollaImage
+        image: "/public/corolla.png"
     },
     {
         id: 3,
@@ -41,7 +35,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 200,
-        image: jeepImage
+        image: "/public/jeep-wrangler.png"
     },
     {
         id: 4,
@@ -53,7 +47,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "Houston",
         price: 220,
-        image: fordImage
+        image: "/public/ford-ranger.png"
     },
     {
         id: 5,
@@ -65,7 +59,7 @@ const carsData = [
         transmission: "Manual",
         location: "Miami",
         price: 250,
-        image: camaroImage
+        image: "/public/chevrolet-camaro.png"
     },
     {
         id: 6,
@@ -77,7 +71,7 @@ const carsData = [
         transmission: "Automatic",
         location: "San Francisco",
         price: 280,
-        image: teslaImage
+        image: "/public/tesla-models.png"
     },
     {
         id: 7,
@@ -89,7 +83,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Chicago",
         price: 270,
-        image: audiImage
+        image: "/public/audi-q5.png"
     }
 ];
 
