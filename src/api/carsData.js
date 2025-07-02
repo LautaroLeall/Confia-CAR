@@ -9,7 +9,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "New York",
         price: 300,
-        image: "/public/bmw-x5.png"
+        image: "/bmw-x5.png"
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 130,
-        image: "/public/corolla.png"
+        image: "/corolla.png"
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 200,
-        image: "/public/jeep-wrangler.png"
+        image: "/jeep-wrangler.png"
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "Houston",
         price: 220,
-        image: "/public/ford-ranger.png"
+        image: "/ford-ranger.png"
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ const carsData = [
         transmission: "Manual",
         location: "Miami",
         price: 250,
-        image: "/public/camaro.png"
+        image: "/camaro.png"
     },
     {
         id: 6,
@@ -69,7 +69,7 @@ const carsData = [
         transmission: "Automatic",
         location: "San Francisco",
         price: 280,
-        image: "/public/tesla-models.png"
+        image: "/tesla-models.png"
     },
     {
         id: 7,
@@ -81,7 +81,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Chicago",
         price: 270,
-        image: "/public/audi-q5.png"
+        image: "/audi-q5.png"
     }
 ];
 
