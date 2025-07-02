@@ -1,10 +1,10 @@
-import bmwImage from 'src/assets/cars/bmw-x5.png';
-import corollaImage from 'src/assets/cars/corolla.png';
-import jeepImage from 'src/assets/cars/jeep-wrangler.png';
-import fordImage from 'src/assets/cars/ford-ranger.png';
-import camaroImage from 'src/assets/cars/camaro.png';
-import teslaImage from 'src/assets/cars/tesla-models.png';
-import audiImage from 'src/assets/cars/audi-q5.png';
+import bmwImage from '../assets/cars/bmw-x5.png';
+import corollaImage from '../assets/cars/corolla.png';
+import jeepImage from '../assets/cars/jeep-wrangler.png';
+import fordImage from '../assets/cars/ford-ranger.png';
+import camaroImage from '../assets/cars/camaro.png';
+import teslaImage from '../assets/cars/tesla-models.png';
+import audiImage from '../assets/cars/audi-q5.png';
 
 // Simular Api data
 const carsData = [
@@ -18,7 +18,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "New York",
         price: 300,
-        image: bmwImage
+        image: bmwImage,
     },
     {
         id: 2,
