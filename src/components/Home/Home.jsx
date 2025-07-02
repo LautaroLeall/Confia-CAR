@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaSearch, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 import './Home.css';
-import carImage from '/main_car.png';
+import carImage from 'main_car.png';
 
 const Home = () => {
   const [pickupLocation, setPickupLocation] = useState('');
