@@ -1,4 +1,11 @@
 // Simular Api data
+import bmwImage from '../assets/cars/bmw-x5.png';
+import corollaImage from '../assets/cars/corolla.png';
+import jeepImage from '../assets/cars/jeep-wrangler.png';
+import fordImage from '../assets/cars/ford-ranger.png';
+import camaroImage from '../assets/cars/camaro.png';
+import teslaImage from '../assets/cars/tesla-models.png';
+import audiImage from '../assets/cars/audi-q5.png';
 
 const carsData = [
     {
@@ -11,7 +18,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "New York",
         price: 300,
-        image: "../assets/cars/bmw-x5.png"
+        image: bmwImage
     },
     {
         id: 2,
@@ -23,7 +30,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 130,
-        image: "../assets/cars/corolla.png"
+        image: corollaImage
     },
     {
         id: 3,
@@ -35,7 +42,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 200,
-        image: "../assets/cars/jeep-wrangler.png"
+        image: jeepImage
     },
     {
         id: 4,
@@ -47,7 +54,7 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "Houston",
         price: 220,
-        image: "../assets/cars/ford-ranger.png"
+        image: fordImage
     },
     {
         id: 5,
@@ -59,7 +66,7 @@ const carsData = [
         transmission: "Manual",
         location: "Miami",
         price: 250,
-        image: "../assets/cars/camaro.png"
+        image: camaroImage
     },
     {
         id: 6,
@@ -71,7 +78,7 @@ const carsData = [
         transmission: "Automatic",
         location: "San Francisco",
         price: 280,
-        image: "../assets/cars/tesla-models.png"
+        image: teslaImage
     },
     {
         id: 7,
@@ -83,7 +90,7 @@ const carsData = [
         transmission: "Automatic",
         location: "Chicago",
         price: 270,
-        image: "../assets/cars/audi-q5.png"
+        image: audiImage
     }
 ];
 
