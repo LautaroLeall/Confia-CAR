@@ -26,10 +26,11 @@ const App = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Verificamos si estamos en una ruta que debe mostrar el footer
-  const showFooterRoutes = ["/home", "/cars", "/myBookings", "/contact"];
-  const shouldShowFooter =
-    showFooterRoutes.includes(location.pathname) || location.pathname.startsWith("/car/");
+  // Verificamos si estamos en una ruta que debe mostrar el footer 
+  // FOOTER COMENTADO 
+  // const showFooterRoutes = ["/home", "/cars", "/myBookings"];
+  // const shouldShowFooter =
+  //   showFooterRoutes.includes(location.pathname) || location.pathname.startsWith("/car/");
 
   return (
     <div className="app-container">
@@ -48,7 +49,7 @@ const App = () => {
         </>
       )}
 
-      {shouldShowFooter && <Footer />}
+      {/* {shouldShowFooter && <Footer />} */}
     </div>
   );
 };

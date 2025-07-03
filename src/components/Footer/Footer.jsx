@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
