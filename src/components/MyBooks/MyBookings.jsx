@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from "react";
+// MyBookings.jsx
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import "./MyBookings.css";
 import Swal from "sweetalert2";
+import { BookingContext } from "../../context/BookingContext"; // usamos el context
+import "./MyBookings.css";
 
 const MyBookings = () => {
-  const [bookings, setBookings] = useState([]);
+  const { bookings, removeBooking } = useContext(BookingContext);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const stored = localStorage.getItem("bookings");
-    if (stored) {
-      setBookings(JSON.parse(stored));
-    }
-  }, []);
-
   const eliminarReserva = (id, event) => {
-    // Para que no se dispare el onClick de la card al hacer click en el botón
     event.stopPropagation();
 
     Swal.fire({
@@ -29,9 +23,7 @@ const MyBookings = () => {
       cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
-        const nuevasReservas = bookings.filter((b) => b.id !== id);
-        setBookings(nuevasReservas);
-        localStorage.setItem("bookings", JSON.stringify(nuevasReservas));
+        removeBooking(id); // eliminamos usando el context
 
         Swal.fire({
           icon: 'success',

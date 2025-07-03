@@ -11,13 +11,27 @@ import "./CarDetail.css";
 const CarDetail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const { addBooking } = useContext(BookingContext);
+    const { addBooking, bookings } = useContext(BookingContext); // usamos bookings para validar
 
     const car = carsData.find((c) => c.id === parseInt(id));
 
     if (!car) return <h2 className="text-center mt-5">Auto no encontrado 🚫</h2>;
 
     const handleReserve = () => {
+        const yaExiste = bookings.some((b) => b.id === car.id); // validación
+        if (yaExiste) {
+            Swal.fire({
+                icon: 'info',
+                title: 'Ya reservado',
+                text: `Ya hiciste una reserva para el ${car.name}.`,
+                toast: true,
+                position: 'top-end',
+                timer: 1800,
+                showConfirmButton: false,
+            });
+            return;
+        }
+
         addBooking(car);
         Swal.fire({
             icon: 'success',
