@@ -4,7 +4,7 @@ import Navbar from './components/NavBar/NavBar.jsx'
 import Background from './components/Background/Background.jsx';
 import RoutesApp from './routes/routes';
 import Hero from './components/Hero/Hero.jsx';
-import Footer from './components/Footer/Footer.jsx';
+// import Footer from './components/Footer/Footer.jsx';
 import './index.css';
 
 const App = () => {
