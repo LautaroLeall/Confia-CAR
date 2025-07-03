@@ -77,6 +77,8 @@ CONFIA-CAR/
 
 ## ⚙️ Instalación y ejecución
 
+[![Probar Confia-Car](https://img.shields.io/badge/Probar%20Confia--Car-%236c757d?style=for-the-badge&logo=netlify&logoColor=white)](https://confia-car-renta.netlify.app/)
+
 ```bash
 # Cloná el repositorio
 git clone https://github.com/TuUsuario/Confia-Car.git
