@@ -19,6 +19,7 @@ const carsData = [
         location: "New York",
         price: 300,
         image: bmwImage,
+        description: "El BMW X5 combina lujo, potencia y confort. Ideal para quienes buscan una experiencia de manejo robusta con toques premium.",
     },
     {
         id: 2,
@@ -30,7 +31,8 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 130,
-        image: corollaImage
+        image: corollaImage,
+        description: "El Toyota Corolla es un sedán compacto, económico y confiable. Perfecto para recorridos urbanos o viajes largos sin preocuparse por el consumo.",
     },
     {
         id: 3,
@@ -42,7 +44,8 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 200,
-        image: jeepImage
+        image: jeepImage,
+        description: "El Jeep Wrangler es la mejor opción para aventuras off-road. Su diseño resistente y tracción te llevan a cualquier lugar con estilo.",
     },
     {
         id: 4,
@@ -54,7 +57,8 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "Houston",
         price: 220,
-        image: fordImage
+        image: fordImage,
+        description: "La Ford Ranger ofrece fuerza, espacio y tecnología. Ideal para viajes familiares o trabajo pesado sin renunciar al confort.",
     },
     {
         id: 5,
@@ -66,7 +70,8 @@ const carsData = [
         transmission: "Manual",
         location: "Miami",
         price: 250,
-        image: camaroImage
+        image: camaroImage,
+        description: "El Chevrolet Camaro es pura adrenalina. Un deportivo potente con diseño agresivo y respuesta precisa para los amantes de la velocidad.",
     },
     {
         id: 6,
@@ -78,7 +83,8 @@ const carsData = [
         transmission: "Automatic",
         location: "San Francisco",
         price: 280,
-        image: teslaImage
+        image: teslaImage,
+        description: "El Tesla Model S redefine la conducción eléctrica. Silencioso, elegante y cargado de tecnología, ideal para un manejo moderno y ecológico.",
     },
     {
         id: 7,
@@ -90,7 +96,8 @@ const carsData = [
         transmission: "Automatic",
         location: "Chicago",
         price: 270,
-        image: audiImage
+        image: audiImage,
+        description: "El Audi Q5 destaca por su confort y diseño sofisticado. Una SUV equilibrada con gran performance y acabados premium.",
     }
 ];
 

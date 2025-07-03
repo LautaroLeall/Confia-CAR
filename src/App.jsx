@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import Navbar from './components/NavBar/NavBar.jsx'
 import Background from './components/Background/Background.jsx';
 import RoutesApp from './routes/routes';
 import Hero from './components/Hero/Hero.jsx';
@@ -27,12 +28,13 @@ const App = () => {
 
   // Verificamos si estamos en una ruta que debe mostrar el footer
   const showFooterRoutes = ["/home", "/cars", "/myBookings", "/contact"];
-  const shouldShowFooter = showFooterRoutes.includes(location.pathname);
+  const shouldShowFooter =
+    showFooterRoutes.includes(location.pathname) || location.pathname.startsWith("/car/");
 
   return (
     <div className="app-container">
+      <Navbar />
       <RoutesApp />
-
       {location.pathname === '/' && (
         <>
           <Background playStatus={playStatus} heroCount={heroCount} />

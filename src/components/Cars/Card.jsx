@@ -1,13 +1,14 @@
-// Card.jsx
 import React, { useRef, useState } from "react";
 import { BsPeopleFill, BsFuelPump } from "react-icons/bs";
 import { FaCar, FaMapMarkerAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
 const Card = ({ car }) => {
   const [visible, setVisible] = useState(false);
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const ref = useRef(null);
+  const navigate = useNavigate();
 
   const handleMouseMove = (e) => {
     const bounds = ref.current.getBoundingClientRect();
@@ -18,6 +19,7 @@ const Card = ({ car }) => {
     <div
       ref={ref}
       className="car-card d-flex flex-column"
+      onClick={() => navigate(`/car/${car.id}`)}
       onMouseEnter={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
       onMouseMove={handleMouseMove}
@@ -65,7 +67,6 @@ const Card = ({ car }) => {
         </div>
       </div>
     </div>
-
   );
 };
 
