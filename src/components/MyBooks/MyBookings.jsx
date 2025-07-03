@@ -1,8 +1,7 @@
-// MyBookings.jsx
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import { BookingContext } from "../../context/BookingContext"; // usamos el context
+import { BookingContext } from "../../context/BookingContext";
 import "./MyBookings.css";
 
 const MyBookings = () => {
@@ -13,25 +12,24 @@ const MyBookings = () => {
     event.stopPropagation();
 
     Swal.fire({
-      title: '¿Estás seguro?',
+      title: "¿Estás seguro?",
       text: "Esta acción eliminará la reserva.",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#dc3545',
-      cancelButtonColor: '#6c757d',
-      confirmButtonText: 'Sí, eliminar',
-      cancelButtonText: 'Cancelar'
+      confirmButtonColor: "#dc3545",
+      cancelButtonColor: "#6c757d",
+      confirmButtonText: "Sí, eliminar",
+      cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        removeBooking(id); // eliminamos usando el context
-
+        removeBooking(id);
         Swal.fire({
-          icon: 'success',
-          title: '¡Reserva eliminada!',
+          icon: "success",
+          title: "¡Reserva eliminada!",
           showConfirmButton: false,
           timer: 1500,
           toast: true,
-          position: 'top-end'
+          position: "top-end",
         });
       }
     });
@@ -41,7 +39,9 @@ const MyBookings = () => {
     <div className="container-reservas">
       <div className="my-bookings-container">
         <h2 className="title-bookings text-center">MIS RESERVAS</h2>
-        <p className="subtitle-bookings text-center">Ver y gestionar tus reservas de coches</p>
+        <p className="subtitle-bookings text-center">
+          Ver y gestionar tus reservas de coches
+        </p>
 
         {bookings.length === 0 ? (
           <div className="empty-bookings text-center fst-italic">
@@ -57,10 +57,21 @@ const MyBookings = () => {
                 onClick={() => navigate(`/car/${car.id}`)}
               >
                 <img src={car.image} alt={car.name} className="booking-img" />
-                <div className="booking-info">
-                  <h5 className="text-center">{car.name}</h5>
-                  <p className="text-primary mb-1 text-center">{car.type} - {car.year}</p>
-                  <p className="text-success mb-1 text-center price-card">${car.price} por día</p>
+                <div className="booking-info text-center">
+                  <h5>{car.name}</h5>
+                  <p className="text-primary mb-1">
+                    {car.type} - {car.year}
+                  </p>
+                  {car.pickUpDate && car.dropOffDate && (
+                    <div className="border border-secondary p-2 text-muted rounded-4 mb-2">
+                      <p className="m-0">
+                        <strong>Retiro:</strong> {car.pickUpDate}
+                      </p>
+                      <p className="m-0">
+                        <strong>Entrega:</strong> {car.dropOffDate}
+                      </p>
+                    </div>
+                  )}
                   <button
                     className="btn btn-outline-danger mt-2"
                     onClick={(event) => eliminarReserva(car.id, event)}

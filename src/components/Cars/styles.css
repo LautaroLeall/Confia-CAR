@@ -72,13 +72,13 @@
 
 .price {
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     right: 10px;
-    background: rgba(170, 270, 170, 0.5);
+    background: rgba(170, 270, 170, 0.8);
     padding: 4px 8px;
     border-radius: 0.5rem;
     font-weight: bold;
-    z-index: 2;
+    z-index: 3;
 }
 
 .card-inner {
