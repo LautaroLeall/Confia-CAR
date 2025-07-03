@@ -1,10 +1,10 @@
-import bmwImage from '../assets/cars/bmw-x5.png';
-import corollaImage from '../assets/cars/corolla.png';
-import jeepImage from '../assets/cars/jeep-wrangler.png';
-import fordImage from '../assets/cars/ford-ranger.png';
-import camaroImage from '../assets/cars/camaro.png';
-import teslaImage from '../assets/cars/tesla-models.png';
-import audiImage from '../assets/cars/audi-q5.png';
+import bmwImage from '/public/cars/bmw-x5.png';
+import corollaImage from '/public/cars/corolla.png';
+import jeepImage from '/public/cars/jeep-wrangler.png';
+import fordImage from '/public/cars/ford-ranger.png';
+import camaroImage from '/public/cars/camaro.png';
+import teslaImage from '/public/cars/tesla-models.png';
+import audiImage from '/public/cars/audi-q5.png';
 
 // Simular Api data
 const carsData = [
@@ -18,8 +18,8 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "New York",
         price: 300,
-        image: bmwImage,
         description: "El BMW X5 combina lujo, potencia y confort. Ideal para quienes buscan una experiencia de manejo robusta con toques premium.",
+        image: bmwImage,
     },
     {
         id: 2,
@@ -31,8 +31,8 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 130,
-        image: corollaImage,
         description: "El Toyota Corolla es un sedán compacto, económico y confiable. Perfecto para recorridos urbanos o viajes largos sin preocuparse por el consumo.",
+        image: corollaImage,
     },
     {
         id: 3,
@@ -44,8 +44,8 @@ const carsData = [
         transmission: "Automatic",
         location: "Los Angeles",
         price: 200,
-        image: jeepImage,
         description: "El Jeep Wrangler es la mejor opción para aventuras off-road. Su diseño resistente y tracción te llevan a cualquier lugar con estilo.",
+        image: jeepImage,
     },
     {
         id: 4,
@@ -57,8 +57,8 @@ const carsData = [
         transmission: "Semi-Automatic",
         location: "Houston",
         price: 220,
-        image: fordImage,
         description: "La Ford Ranger ofrece fuerza, espacio y tecnología. Ideal para viajes familiares o trabajo pesado sin renunciar al confort.",
+        image: fordImage,
     },
     {
         id: 5,
@@ -70,8 +70,8 @@ const carsData = [
         transmission: "Manual",
         location: "Miami",
         price: 250,
-        image: camaroImage,
         description: "El Chevrolet Camaro es pura adrenalina. Un deportivo potente con diseño agresivo y respuesta precisa para los amantes de la velocidad.",
+        image: camaroImage,
     },
     {
         id: 6,
@@ -83,8 +83,8 @@ const carsData = [
         transmission: "Automatic",
         location: "San Francisco",
         price: 280,
-        image: teslaImage,
         description: "El Tesla Model S redefine la conducción eléctrica. Silencioso, elegante y cargado de tecnología, ideal para un manejo moderno y ecológico.",
+        image: teslaImage,
     },
     {
         id: 7,
@@ -96,8 +96,8 @@ const carsData = [
         transmission: "Automatic",
         location: "Chicago",
         price: 270,
-        image: audiImage,
         description: "El Audi Q5 destaca por su confort y diseño sofisticado. Una SUV equilibrada con gran performance y acabados premium.",
+        image: audiImage,
     }
 ];
 
