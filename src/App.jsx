@@ -4,7 +4,7 @@ import Navbar from './components/NavBar/NavBar.jsx'
 import Background from './components/Background/Background.jsx';
 import RoutesApp from './routes/routes';
 import Hero from './components/Hero/Hero.jsx';
-import Footer from './components/Footer/Footer.jsx';
+// import Footer from './components/Footer/Footer.jsx';
 import './index.css';
 
 const App = () => {
@@ -26,10 +26,11 @@ const App = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Verificamos si estamos en una ruta que debe mostrar el footer
-  const showFooterRoutes = ["/home", "/cars", "/myBookings", "/contact"];
-  const shouldShowFooter =
-    showFooterRoutes.includes(location.pathname) || location.pathname.startsWith("/car/");
+  // Verificamos si estamos en una ruta que debe mostrar el footer 
+  // FOOTER COMENTADO 
+  // const showFooterRoutes = ["/home", "/cars", "/myBookings"];
+  // const shouldShowFooter =
+  //   showFooterRoutes.includes(location.pathname) || location.pathname.startsWith("/car/");
 
   return (
     <div className="app-container">
@@ -48,7 +49,7 @@ const App = () => {
         </>
       )}
 
-      {shouldShowFooter && <Footer />}
+      {/* {shouldShowFooter && <Footer />} */}
     </div>
   );
 };
