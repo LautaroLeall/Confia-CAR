@@ -1,3 +1,4 @@
+// src/components/Cars/Card.jsx
 import React, { useRef, useState } from "react";
 import { BsPeopleFill, BsFuelPump } from "react-icons/bs";
 import { FaCar, FaMapMarkerAlt } from "react-icons/fa";
@@ -28,15 +29,11 @@ const Card = ({ car }) => {
         <div
           className="blur-spot"
           style={{ top: pos.y - 120, left: pos.x - 120 }}
-        ></div>
+        />
       )}
 
       <div className="car-img-wrapper">
-        <img
-          src={car.image}
-          className="car-img"
-          alt={car.name}
-        />
+        <img src={car.image} className="car-img" alt={car.name} />
         <h6 className="price text-success">${car.price}/DAY</h6>
       </div>
 
@@ -47,21 +44,21 @@ const Card = ({ car }) => {
           <div className="primer-container d-flex justify-around gap-5">
             <p className="text-description d-flex align-items-center text-center p-2">
               <BsPeopleFill />
-              <p className="m-0 ps-1">{car.seats} Asientos</p>
+              <span className="ps-1">{car.seats} Asientos</span>
             </p>
             <p className="text-description d-flex align-items-center text-center p-2">
               <BsFuelPump />
-              <p className="m-0 ps-1">{car.fuel}</p>
+              <span className="ps-1">{car.fuel}</span>
             </p>
           </div>
           <div className="segundo-container d-flex justify-around gap-5">
             <p className="text-description d-flex align-items-center text-center p-2">
               <FaCar />
-              <p className="m-0 ps-1">{car.transmission}</p>
+              <span className="ps-1">{car.transmission}</span>
             </p>
             <p className="text-description d-flex align-items-center text-center p-2">
               <FaMapMarkerAlt />
-              <p className="m-0 ps-1">{car.location}</p>
+              <span className="ps-1">{car.location}</span>
             </p>
           </div>
         </div>
