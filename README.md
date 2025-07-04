@@ -1,6 +1,6 @@
 # 🚗 Confia-Car
 
-Aplicación de reservas de autos desarrollada en ReactJS. Permite a los usuarios explorar una variedad de vehículos, ver los detalles de cada uno y realizar reservas que se almacenan localmente. Pensada con una experiencia visual atractiva, lógica organizada y un flujo de navegación fluido. ¡Perfecta para aprender o mostrar en entrevistas!
+Aplicación de reservas de autos desarrollada en ReactJS. Permite a los usuarios explorar una variedad de vehículos, ver los detalles de cada uno y realizar reservas que se almacenan localmente. Pensada con una experiencia visual atractiva, lógica organizada y un flujo de navegación fluido.
 
 ---
 
