@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Navbar from './components/NavBar/NavBar.jsx'
+import Navbar from './components/NavBar/NavBar.jsx';
 import Background from './components/Background/Background.jsx';
 import RoutesApp from './routes/routes';
 import Hero from './components/Hero/Hero.jsx';
-// import Footer from './components/Footer/Footer.jsx';
+import carsData from './api/carsData';
 import './index.css';
 
 const App = () => {
@@ -35,7 +35,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Navbar />
-      <RoutesApp />
+      <RoutesApp cars={carsData} /> {/* Simulamos API */}
       {location.pathname === '/' && (
         <>
           <Background playStatus={playStatus} heroCount={heroCount} />
@@ -55,3 +55,4 @@ const App = () => {
 };
 
 export default App;
+

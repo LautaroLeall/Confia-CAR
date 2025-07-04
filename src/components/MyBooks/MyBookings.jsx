@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { BookingContext } from "../../context/BookingContext";
+import { AuthContext } from "../../context/AuthContext";
 import "./MyBookings.css";
 
 const MyBookings = () => {
   const { bookings, removeBooking } = useContext(BookingContext);
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const eliminarReserva = (id, event) => {
@@ -26,6 +28,50 @@ const MyBookings = () => {
         Swal.fire({
           icon: "success",
           title: "¡Reserva eliminada!",
+          showConfirmButton: false,
+          timer: 1500,
+          toast: true,
+          position: "top-end",
+        });
+      }
+    });
+  };
+
+  const handlePagar = (car, event) => {
+    event.stopPropagation();
+
+    // Solo si está logueado, permitir pagar
+    if (!user) {
+      return Swal.fire({
+        icon: "warning",
+        title: "Iniciá sesión",
+        text: "Debés iniciar sesión para pagar una reserva.",
+        confirmButtonText: "Aceptar",
+      });
+    }
+
+    Swal.fire({
+      title: "¿Deseás confirmar el pago?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#28a745",
+      cancelButtonColor: "#6c757d",
+      confirmButtonText: "Sí, pagar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // 1. Guardar en localStorage
+        const paidCars = JSON.parse(localStorage.getItem("paidCars")) || [];
+        localStorage.setItem("paidCars", JSON.stringify([...paidCars, car]));
+
+        // 2. Remover de reservas
+        removeBooking(car.id);
+
+        // 3. Notificación
+        Swal.fire({
+          icon: "success",
+          title: "¡Pago realizado!",
+          text: `Pagaste el alquiler de ${car.name}`,
           showConfirmButton: false,
           timer: 1500,
           toast: true,
@@ -65,6 +111,9 @@ const MyBookings = () => {
                   {car.pickUpDate && car.dropOffDate && (
                     <div className="border border-secondary p-2 text-muted rounded-4 mb-2">
                       <p className="m-0">
+                        <strong>{car.location}</strong>
+                      </p>
+                      <p className="m-0">
                         <strong>Retiro:</strong> {car.pickUpDate}
                       </p>
                       <p className="m-0">
@@ -72,12 +121,20 @@ const MyBookings = () => {
                       </p>
                     </div>
                   )}
-                  <button
-                    className="btn btn-outline-danger mt-2"
-                    onClick={(event) => eliminarReserva(car.id, event)}
-                  >
-                    Eliminar Reserva
-                  </button>
+                  <div className="btn-bookings d-flex gap-4 justify-content-center">
+                    <button
+                      className="btn btn-outline-danger mt-2"
+                      onClick={(event) => eliminarReserva(car.id, event)}
+                    >
+                      Eliminar
+                    </button>
+                    <button
+                      className="btn btn-outline-success mt-2"
+                      onClick={(event) => handlePagar(car, event)}
+                    >
+                      Pagar
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
