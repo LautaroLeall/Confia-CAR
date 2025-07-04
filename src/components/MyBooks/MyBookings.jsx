@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+// src/components/MyBookings/MyBookings.jsx
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { BookingContext } from "../../context/BookingContext";
 import { AuthContext } from "../../context/AuthContext";
+import PaymentModal from "../PaymentModal/PaymentModal";
 import "./MyBookings.css";
 
 const MyBookings = () => {
@@ -10,9 +12,12 @@ const MyBookings = () => {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  // Estado para manejar el modal y el auto seleccionado
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
+  const [carToPay, setCarToPay] = useState(null);
+
   const eliminarReserva = (id, event) => {
     event.stopPropagation();
-
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción eliminará la reserva.",
@@ -37,10 +42,10 @@ const MyBookings = () => {
     });
   };
 
+  // Abre el modal para el pago
   const handlePagar = (car, event) => {
     event.stopPropagation();
 
-    // Solo si está logueado, permitir pagar
     if (!user) {
       return Swal.fire({
         icon: "warning",
@@ -50,34 +55,39 @@ const MyBookings = () => {
       });
     }
 
+    setCarToPay(car);
+    setShowPaymentModal(true);
+  };
+
+  // Cierra el modal
+  const handleCloseModal = () => {
+    setShowPaymentModal(false);
+    setCarToPay(null);
+  };
+
+  // Maneja la confirmación del pago desde el modal
+  const handleConfirmPayment = (car) => {
+    // Guardar el pago bajo el email del usuario en localStorage
+    const pagosPorUsuario = JSON.parse(localStorage.getItem("paidCars")) || {};
+    const userEmail = user.email;
+
+    if (!pagosPorUsuario[userEmail]) {
+      pagosPorUsuario[userEmail] = [];
+    }
+
+    pagosPorUsuario[userEmail].push(car);
+    localStorage.setItem("paidCars", JSON.stringify(pagosPorUsuario));
+
+    removeBooking(car.id);
+
     Swal.fire({
-      title: "¿Deseás confirmar el pago?",
-      icon: "question",
-      showCancelButton: true,
-      confirmButtonColor: "#28a745",
-      cancelButtonColor: "#6c757d",
-      confirmButtonText: "Sí, pagar",
-      cancelButtonText: "Cancelar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // 1. Guardar en localStorage
-        const paidCars = JSON.parse(localStorage.getItem("paidCars")) || [];
-        localStorage.setItem("paidCars", JSON.stringify([...paidCars, car]));
-
-        // 2. Remover de reservas
-        removeBooking(car.id);
-
-        // 3. Notificación
-        Swal.fire({
-          icon: "success",
-          title: "¡Pago realizado!",
-          text: `Pagaste el alquiler de ${car.name}`,
-          showConfirmButton: false,
-          timer: 1500,
-          toast: true,
-          position: "top-end",
-        });
-      }
+      icon: "success",
+      title: "¡Pago realizado!",
+      text: `Pagaste el alquiler de ${car.name}`,
+      showConfirmButton: false,
+      timer: 2000,
+      toast: true,
+      position: "top-end",
     });
   };
 
@@ -139,6 +149,19 @@ const MyBookings = () => {
               </div>
             ))}
           </div>
+        )}
+
+        {/* Modal de Pago */}
+        {carToPay && (
+          <PaymentModal
+            show={showPaymentModal}
+            onClose={handleCloseModal}
+            onConfirmPayment={(car) => {
+              handleConfirmPayment(car);
+              handleCloseModal();
+            }}
+            car={carToPay}
+          />
         )}
       </div>
     </div>
