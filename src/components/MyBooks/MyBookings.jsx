@@ -76,7 +76,7 @@ const MyBookings = () => {
                     className="btn btn-outline-danger mt-2"
                     onClick={(event) => eliminarReserva(car.id, event)}
                   >
-                    Eliminar reserva
+                    Eliminar Reserva
                   </button>
                 </div>
               </div>

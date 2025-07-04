@@ -74,9 +74,15 @@
     padding: 0.5rem;
 }
 
-.input-group input[type="text"] {
-    padding-left: 2.5rem;
-    /* Espacio para el ícono */
+.input-group select {
+    width: 100%;
+    border: 1px solid #132d40;
+    border-radius: 2.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 0.95rem;
+    color: #132d40;
+    padding: 0.5rem;
 }
 
 .input-group input[type="date"] {
@@ -85,13 +91,6 @@
     color-scheme: light;
     /* Asegura que el picker de fecha sea claro */
     cursor: pointer;
-}
-
-/* Estilo para el placeholder */
-.input-group input::placeholder {
-    color: #132d4060;
-    font-size: 0.8rem;
-    font-weight: bold;
 }
 
 /* Ocultar el ícono del calendario nativo */
