@@ -1,4 +1,4 @@
-.container-reservas {
+.container-pagos {
     position: absolute;
     top: 0;
     z-index: -1;
@@ -8,45 +8,33 @@
     overflow: hidden;
 }
 
-.my-bookings-container {
+.container-myPayments {
     margin-top: 8rem;
 }
 
-.title-bookings {
+.title-pagos {
     font-size: 2.5rem;
     font-weight: 600;
-    margin-bottom: 1rem;
-    letter-spacing: 0.3em;
     color: #333;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+    letter-spacing: 0.3em;
 }
 
-.subtitle-bookings {
-    color: #333;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.empty-bookings {
-    margin-top: 4rem;
-    font-size: 1.2rem;
-    color: #333;
-    font-weight: semi-bold;
-}
-
-.booking-card {
+.payment-card {
     background: rgba(255, 255, 255, 0.4);
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 5);
     padding: 1rem;
-    transition: transform 0.3s;
+    transition: 0.3s;
 }
 
-.booking-card:hover {
-    transform: translateY(-5px);
+.payment-card:hover {
+    transform: scale(0.9);
+    transition: 0.3s;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 1);
 }
 
-.booking-img {
+.payment-img {
     width: 100%;
     max-width: 250px;
     height: 180px;
@@ -54,16 +42,9 @@
     margin: 0 auto;
 }
 
-.booking-info h5 {
+.payment-info h5 {
     margin-top: 1rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     color: #333;
-}
-
-.price-card {
-    background: rgba(170, 270, 170, 0.5);
-    padding: 4px 8px;
-    border-radius: 0.5rem;
-    width: 50%;
 }

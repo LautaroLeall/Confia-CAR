@@ -1,23 +1,34 @@
-import { Routes, Route } from 'react-router-dom'
-import Home from '../components/Home/Home'
-import Carousel from "../components/Cars/Carousel.jsx";
-import carsData from "../api/carsData.js";
-import CarDetail from '../components/CarDetail/CarDetail.jsx'
-import MyBookings from '../components/MyBooks/MyBookings'
-import Contact from '../components/Contact/Contact'
+// src/routes/routes.jsx
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "../components/Home/Home";
+import Carousel from "../components/Cars/Carousel";
+import CarDetail from "../components/CarDetail/CarDetail";
+import MyBookings from "../components/MyBooks/MyBookings";
+import MyPayments from "../components/MyPayments/MyPayments";
+import Contact from "../components/Contact/Contact";
+import Login from "../components/Auth/Login";
+import Register from "../components/Auth/Register";
+import PrivateRoute from "./PrivateRoute";
 
-const RoutesApp = () => {
-    return (
-        <>
-            <Routes>
-                <Route path="/home" element={<Home />} />
-                <Route path="/cars" element={<Carousel cars={carsData} />} />
-                <Route path="/car/:id" element={<CarDetail />} />
-                <Route path="/myBookings" element={<MyBookings />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-        </>
-    )
-}
+const AppRoutes = ({ cars }) => (
+    <Routes>
+        <Route path="/" />
+        <Route path="/home" element={<Home />} />
+        <Route path="/cars" element={<Carousel cars={cars} />} />
+        <Route path="/car/:id" element={<CarDetail />} />
+        <Route path="/myBookings" element={<MyBookings />} />
 
-export default RoutesApp;
+        <Route path="/myPayments" element={
+            <PrivateRoute>
+                <MyPayments />
+            </PrivateRoute>
+        } />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/contact" element={<Contact />} />
+    </Routes>
+);
+
+export default AppRoutes;
