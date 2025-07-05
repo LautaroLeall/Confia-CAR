@@ -15,7 +15,7 @@ const NotFound = () => {
                 <p className="notfound-sub">¿Quizás te perdiste? Recalculando GPS...</p>
 
                 <div className="car-wrapper">
-                    <img src= {perdidoImage} className="car-img" />
+                    <img src= {perdidoImage} className="auto-perdido" alt="auto-perdido"/>
                 </div>
 
                 <button className="btn-back" onClick={() => navigate("/")}>
