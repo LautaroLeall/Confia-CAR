@@ -41,8 +41,10 @@
     overflow: visible;
 }
 
-.car-img {
-    width: 200px;
+.auto-perdido {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     animation: carDrive 2s infinite ease-in-out;
 }
 
