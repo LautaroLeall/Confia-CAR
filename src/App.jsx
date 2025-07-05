@@ -22,21 +22,26 @@ const App = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setHeroCount((count) => (count === 2 ? 0 : count + 1));
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  // Verificamos si estamos en una ruta que debe mostrar el footer 
-  // FOOTER COMENTADO 
-  // const showFooterRoutes = ["/home", "/cars", "/myBookings"];
-  // const shouldShowFooter =
-  //   showFooterRoutes.includes(location.pathname) || location.pathname.startsWith("/car/");
+  // Rutas que muestran contenido especial como navbar
+  const rutasConLayout = [
+    "/", "/home", "/cars", "/contact",
+    "/login", "/register", "/myBookings", "/myPayments"
+  ];
+
+  const debeMostrarLayout = rutasConLayout.some((ruta) =>
+    location.pathname === ruta || location.pathname.startsWith("/car/")
+  );
 
   return (
     <div className="app-container">
-      <Navbar />
-      <RoutesApp cars={carsData} /> {/* Simulamos API */}
-      {location.pathname === '/' && (
+      {debeMostrarLayout && <Navbar />}
+      <RoutesApp cars={carsData} />
+
+      {location.pathname === "/" && debeMostrarLayout && (
         <>
           <Background playStatus={playStatus} heroCount={heroCount} />
           <Hero
@@ -53,6 +58,7 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;
 
