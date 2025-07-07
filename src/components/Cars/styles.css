@@ -5,6 +5,7 @@
     z-index: -1;
     background: linear-gradient(to bottom, #333333, #ffffff);
     height: 100vh;
+    min-height: 65vh;
     width: 100vw;
     overflow: hidden;
 }
@@ -14,11 +15,14 @@
     position: relative;
     width: 100vw;
     margin-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .carousel-inner {
     cursor: grab;
     user-select: none;
+    height: 55vh;
+    will-change: transform;
 }
 
 .carousel-inner:active {
@@ -28,11 +32,6 @@
 /* ocultar scrollbars */
 .carousel-inner::-webkit-scrollbar {
     display: none;
-}
-
-.carousel-inner {
-    height: 55vh;
-    will-change: transform;
 }
 
 /* CARDS */
@@ -108,4 +107,33 @@
     filter: blur(50px);
     pointer-events: none;
     z-index: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .container-carousel {
+        min-height: 75vh;
+    }
+    .car-card {
+        width: 20rem;
+        height: 25rem;
+    }
+
+    .car-img-wrapper {
+        flex: 1 0 45%;
+    }
+
+    .card-inner {
+        flex: 1 0 55%;
+    }
+
+    .text-description {
+        flex-direction: column;
+        width: 10rem;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: 0.5s;
+        justify-content: center;
+    }
 }
