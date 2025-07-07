@@ -45,36 +45,22 @@
 }
 
 .input-group label {
-    display: block;
     font-size: 0.85rem;
     font-weight: 500;
     color: #132d40;
     margin-bottom: 0.4rem;
-    padding-left: 0.5rem;
+    padding-left: 1.5rem;
 }
 
 .input-with-icon {
-    position: relative;
     display: flex;
     align-items: center;
 }
 
 .input-with-icon .input-icon {
-    position: absolute;
-    left: 1rem;
-    color: var(--label-color);
+    position: relative;
+    left: 2rem;
     font-size: 1rem;
-}
-
-.input-group input {
-    width: 100%;
-    border: 1px solid #132d40;
-    border-radius: 2.5rem;
-    background: transparent;
-    outline: none;
-    font-size: 0.95rem;
-    color: #132d40;
-    padding: 0.5rem;
 }
 
 .input-group select {
@@ -86,13 +72,25 @@
     font-size: 0.95rem;
     color: #132d40;
     padding: 0.5rem;
+    cursor: pointer;
+}
+
+.input-group input {
+    width: 100%;
+    border: 1px solid #132d40;
+    border-radius: 2.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 0.95rem;
+    color: #132d40;
+    padding: 0.5rem;
+    text-align: center;
+    padding-right: 1.5rem;
 }
 
 .input-group input[type="date"] {
     padding-left: 3rem;
     /* Espacio para el ícono */
-    color-scheme: light;
-    /* Asegura que el picker de fecha sea claro */
     cursor: pointer;
 }
 
@@ -110,20 +108,19 @@
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, font-size 0.1s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     justify-self: end;
-    /* Alinea el botón a la derecha en la cuadrícula */
 }
 
 .search-button:hover {
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.8rem;
     background-color: #0056b3;
     transform: scale(1.1);
 }
@@ -156,13 +153,26 @@
         grid-template-columns: 1fr;
         gap: 1rem;
         padding: 1.5rem;
-        border-radius: 1.5rem;
     }
 
     .input-group {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .input-with-icon .input-icon {
+        left: 1.8rem;
+        font-size: 0.9rem;
+    }
+
+    .input-group select {
+        width: 280px;
+    }
+
+    .input-group input,
+    .input-group select {
+        padding-right: 5rem;
     }
 
     .search-button {
@@ -193,24 +203,26 @@
     }
 
     .input-group {
-        display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .input-group label {
         font-size: 0.75rem;
     }
 
-    #pickup-location{
-        padding-left: 2.5rem;
+    .input-group select {
+        width: 15rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.5rem 0.4rem 1rem;
     }
 
-    .input-group input,
-    .input-group select {
+    .input-group input[type="date"] {
+        width: 12rem;
         font-size: 0.85rem;
-        padding: 0.4rem 0.5rem;
+        padding: 0.4rem 0.5rem 0.4rem 1rem;
     }
+
 
     .search-button {
         width: 45px;

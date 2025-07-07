@@ -1,3 +1,4 @@
+// src/components/BookingModal/BookingModal.jsx
 import React, { useState } from "react";
 import "./BookingModal.css";
 import Swal from "sweetalert2";

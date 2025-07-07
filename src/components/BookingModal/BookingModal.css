@@ -59,6 +59,7 @@
         position: fixed;
         top: 20%;
         margin: 0 55px;
+        margin: 0 55px;
     }
 
     .title-modal {
@@ -76,10 +77,6 @@
 }
 
 @media (max-width: 576px) {
-    .booking-modal {
-        margin: 0 55px;
-    }
-
     .title-modal {
         font-size: 1rem;
     }

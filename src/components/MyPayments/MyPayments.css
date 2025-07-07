@@ -3,9 +3,8 @@
     top: 0;
     z-index: -1;
     background: linear-gradient(to bottom, #333333, #ffffff);
-    height: 95vh;
+    height: 100vh;
     width: 100%;
-    overflow: hidden;
 }
 
 .container-myPayments {
@@ -18,6 +17,18 @@
     color: #333;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
     letter-spacing: 0.3em;
+}
+
+.subtitle-payments {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.empty-payments {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: semi-bold;
 }
 
 .payment-card {
@@ -47,4 +58,71 @@
     font-weight: 600;
     letter-spacing: 0.1em;
     color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .container-pagos {
+        height: 100vh;
+    }
+
+    .container-myPayments {
+        margin-top: 7rem;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .title-pagos {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.2em;
+    }
+
+    .payment-card {
+        width: auto;
+        height: auto;
+    }
+
+    .payment-img {
+        width: 100%;
+        max-width: 200px;
+        height: 150px;
+    }
+
+    .payment-info h5 {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .payment-card:hover {
+        transform: scale(1);
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 1);
+    }
+}
+
+@media (max-width: 576px) {
+    .container-myPayments {
+        margin-top: 6rem;
+    }
+
+    .title-pagos {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .payment-card {
+        width: auto;
+        height: auto;
+    }
+
+    .payment-img {
+        width: 100%;
+        max-width: 150px;
+        height: 120px;
+    }
+
+    .payment-info h5 {
+        font-size: 1rem;
+        margin-top: 0;
+    }
 }
