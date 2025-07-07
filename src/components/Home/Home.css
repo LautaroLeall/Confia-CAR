@@ -39,6 +39,9 @@
 
 .input-group {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .input-group label {
@@ -133,4 +136,89 @@
     max-width: 100%;
     height: auto;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .home-container {
+        min-height: 70vh;
+    }
+
+    .content-wrapper {
+        padding: 0 30px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .search-form {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .search-button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .car-image-container {
+        margin-top: 2rem;
+    }
+
+    .image-car {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.5rem;
+        letter-spacing: 0.15em;
+    }
+
+    .search-form {
+        padding: 1rem;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .input-group label {
+        font-size: 0.75rem;
+    }
+
+    #pickup-location{
+        padding-left: 2.5rem;
+    }
+
+    .input-group input,
+    .input-group select {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.5rem;
+    }
+
+    .search-button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .car-image-container {
+        margin-top: 2rem;
+    }
 }

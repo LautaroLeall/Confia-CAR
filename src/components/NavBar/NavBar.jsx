@@ -1,62 +1,65 @@
 // src/components/NavBar/NavBar.jsx
 import { Link } from 'react-router-dom';
-import { FaSignInAlt, FaUserPlus } from 'react-icons/fa';
-import { useContext } from 'react';
+import { FaSignInAlt, FaUserPlus, FaBars } from 'react-icons/fa';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import './NavBar.css';
 
 const NavBar = () => {
     const { user, logout } = useContext(AuthContext);
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+    const closeMenu = () => setMenuOpen(false); //  Nueva función
 
     return (
         <div className='nav d-flex align-items-center justify-content-between'>
             <div className='nav-logo'>
-                <Link to="/">CONFIA CAR</Link>
+                <Link to="/" onClick={closeMenu}>CONFIA CAR</Link> {/*  Cierra al ir al inicio */}
             </div>
 
-            <ul className="nav-menu d-flex align-items-center m-0">
-                <li>
-                    <Link to="/home">Inicio</Link>
-                </li>
-                <li>
-                    <Link to="/cars">Autos</Link>
-                </li>
-                <li>
-                    <Link to="/myBookings">Mis Reservas</Link>
-                </li>
-                {user && (
-                    <li>
-                        <Link to="/myPayments">Mis Pagos</Link>
-                    </li>
-                )}
-                <li className='nav-contact'>
-                    <Link to="/contact">Contacto</Link>
-                </li>
+            <div className="nav-toggle d-lg-none" onClick={toggleMenu}>
+                <FaBars />
+            </div>
 
-                {/* ACCIONES DE LOGIN / LOGOUT */}
-                {user ? (
-                    <div className="d-flex align-items-center">
-                        <button
-                            onClick={logout}
-                            className="btn btn-logout btn-sm"
-                        >
-                            Cerrar Sesión
-                        </button>
-                    </div>
-                ) : (
-                    <div className="d-flex gap-5">
-                        <li className="nav-icon">
-                            <Link to="/register" title="Registrarse" className="nav-icon">
-                                <FaUserPlus className="nav-icon" />
-                            </Link>
-                        </li>
-                        <li className="nav-icon">
-                            <Link to="/login" title="Iniciar Sesión" className="nav-icon">
-                                <FaSignInAlt className="nav-icon" />
-                            </Link>
-                        </li>
-                    </div>
-                )}
+            <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
+                <li><Link to="/home" onClick={closeMenu}>Inicio</Link></li>
+                <li><Link to="/cars" onClick={closeMenu}>Autos</Link></li>
+                <li><Link to="/myBookings" onClick={closeMenu}>Mis Reservas</Link></li>
+                {user && <li><Link to="/myPayments" onClick={closeMenu}>Mis Pagos</Link></li>}
+                
+                <div className="contact-auth d-flex align-items-center gap-5">
+                    <li className='nav-contact'>
+                        <Link to="/contact" onClick={closeMenu}>Contacto</Link>
+                    </li>
+
+                    {user ? (
+                        <div className="d-flex align-items-center">
+                            <button 
+                                onClick={() => {
+                                    logout();
+                                    closeMenu(); //  lo cerramos al cerrar sesión (mobile)
+                                }} 
+                                className="btn btn-logout btn-sm"
+                            >
+                                Cerrar Sesión
+                            </button>
+                        </div>
+                    ) : (
+                        <div className="d-flex gap-5">
+                            <li>
+                                <Link to="/register" title="Registrarse" className="nav-icon" onClick={closeMenu}>
+                                    <FaUserPlus />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/login" title="Iniciar Sesión" className="nav-icon" onClick={closeMenu}>
+                                    <FaSignInAlt />
+                                </Link>
+                            </li>
+                        </div>
+                    )}
+                </div>
             </ul>
         </div>
     );

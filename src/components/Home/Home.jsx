@@ -66,7 +66,7 @@ const Home = () => {
 
         <form className="search-form" onSubmit={handleSubmit}>
           {/* Ubicación */}
-          <div className="input-group d-flex flex-column">
+          <div className="input-group">
             <label htmlFor="pickup-location">Lugar de Inicio</label>
             <div className="input-with-icon">
               <FaMapMarkerAlt className="input-icon" />
@@ -121,9 +121,11 @@ const Home = () => {
             </div>
           </div>
 
-          <button type="submit" className="search-button">
-            <FaSearch />
-          </button>
+          <div className="d-flex justify-content-center align-items">
+            <button type="submit" className="search-button">
+              <FaSearch />
+            </button>
+          </div>
         </form>
 
         <div className="car-image-container">
