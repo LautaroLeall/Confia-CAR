@@ -158,7 +158,8 @@
     .input-group {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        text-align: center;
     }
 
     .input-with-icon .input-icon {
@@ -166,13 +167,21 @@
         font-size: 0.9rem;
     }
 
-    .input-group select {
-        width: 280px;
+    .input-group label {
+        font-size: 0.75rem;
     }
 
-    .input-group input,
     .input-group select {
-        padding-right: 5rem;
+        width: 15rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.5rem 0.4rem 1rem;
+        text-align: center;
+    }
+
+    .input-group input[type="date"] {
+        width: 12rem;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.5rem 0.4rem 1rem;
     }
 
     .search-button {
@@ -201,28 +210,6 @@
     .search-form {
         padding: 1rem;
     }
-
-    .input-group {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .input-group label {
-        font-size: 0.75rem;
-    }
-
-    .input-group select {
-        width: 15rem;
-        font-size: 0.85rem;
-        padding: 0.4rem 0.5rem 0.4rem 1rem;
-    }
-
-    .input-group input[type="date"] {
-        width: 12rem;
-        font-size: 0.85rem;
-        padding: 0.4rem 0.5rem 0.4rem 1rem;
-    }
-
 
     .search-button {
         width: 45px;
