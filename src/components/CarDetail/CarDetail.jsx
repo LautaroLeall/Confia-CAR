@@ -63,24 +63,24 @@ const CarDetail = () => {
                         </p>
                         <div className="container-detalles">
                             <div className="primer-container d-flex justify-around gap-5">
-                                <p className="text-description d-flex align-items-center text-center p-2">
+                                <div className="text-description d-flex align-items-center text-center p-2 mb-3">
                                     <BsPeopleFill />
                                     <p className="m-0 ps-1">{car.seats} Asientos</p>
-                                </p>
-                                <p className="text-description d-flex align-items-center text-center p-2">
+                                </div>
+                                <div className="text-description d-flex align-items-center text-center p-2 mb-3">
                                     <BsFuelPump />
                                     <p className="m-0 ps-1">{car.fuel}</p>
-                                </p>
+                                </div>
                             </div>
                             <div className="segundo-container d-flex justify-around gap-5">
-                                <p className="text-description d-flex align-items-center text-center p-2">
+                                <div className="text-description d-flex align-items-center text-center p-2 mb-3">
                                     <FaCar />
                                     <p className="m-0 ps-1">{car.transmission}</p>
-                                </p>
-                                <p className="text-description d-flex align-items-center text-center p-2">
+                                </div>
+                                <div className="text-description d-flex align-items-center text-center p-2 mb-3">
                                     <FaMapMarkerAlt />
                                     <p className="m-0 ps-1">{car.location}</p>
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
