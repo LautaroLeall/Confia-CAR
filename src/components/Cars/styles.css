@@ -7,7 +7,6 @@
     height: 100vh;
     min-height: 65vh;
     width: 100vw;
-    overflow: hidden;
 }
 
 .carousel-wrapper {
@@ -112,11 +111,11 @@
 /* RESPONSIVE */
 @media (max-width: 992px) {
     .container-carousel {
-        min-height: 75vh;
+        min-height: 100vh;
     }
+
     .car-card {
         width: 20rem;
-        height: 25rem;
     }
 
     .car-img-wrapper {
@@ -135,5 +134,26 @@
         border-radius: 0.5rem;
         transition: 0.5s;
         justify-content: center;
+    }
+
+    .price {
+        position: absolute;
+        bottom: -10px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .car-card {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .car-img-wrapper {
+        flex: 1 0 40%;
+    }
+
+    .card-inner {
+        flex: 1 0 60%;
     }
 }

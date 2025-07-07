@@ -105,7 +105,7 @@ const MyBookings = () => {
             <p>¡Andá a ver nuestros autos y elegí tu próxima aventura!</p>
           </div>
         ) : (
-          <div className="bookings-grid d-flex flex-wrap align-items-center justify-content-center gap-5">
+          <div className="bookings-grid">
             {bookings.map((car) => (
               <div
                 key={car.id}
@@ -119,27 +119,27 @@ const MyBookings = () => {
                     {car.type} - {car.year}
                   </p>
                   {car.pickUpDate && car.dropOffDate && (
-                    <div className="border border-secondary p-2 text-muted rounded-4 mb-2">
-                      <p className="m-0">
-                        <strong>{car.location}</strong>
+                    <div className="border border-secondary p-1 text-muted rounded-4 mb-2">
+                      <p className="m-0 text-myBookings">
+                        <strong className="text-myBookings">{car.location}</strong>
                       </p>
-                      <p className="m-0">
-                        <strong>Retiro:</strong> {car.pickUpDate}
+                      <p className="m-0 text-myBookings">
+                        <strong className="text-myBookings">Retiro:</strong> {car.pickUpDate}
                       </p>
-                      <p className="m-0">
-                        <strong>Entrega:</strong> {car.dropOffDate}
+                      <p className="m-0 text-myBookings">
+                        <strong className="text-myBookings">Entrega:</strong> {car.dropOffDate}
                       </p>
                     </div>
                   )}
                   <div className="btn-bookings d-flex gap-4 justify-content-center">
                     <button
-                      className="btn btn-outline-danger mt-2"
+                      className="btn btn-bookings btn-outline-danger mt-2"
                       onClick={(event) => eliminarReserva(car.id, event)}
                     >
                       Eliminar
                     </button>
                     <button
-                      className="btn btn-outline-success mt-2"
+                      className="btn btn-bookings btn-outline-success mt-2"
                       onClick={(event) => handlePagar(car, event)}
                     >
                       Pagar

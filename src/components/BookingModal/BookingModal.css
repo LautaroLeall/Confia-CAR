@@ -34,7 +34,7 @@
     letter-spacing: 0.1em;
 }
 
-.btn-modal{
+.btn-modal {
     font-size: 1.1rem;
     letter-spacing: 0.1em;
     padding: 0.5rem 1rem;
@@ -50,5 +50,46 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .booking-modal {
+        position: fixed;
+        top: 20%;
+        margin: 0 55px;
+    }
+
+    .title-modal {
+        font-size: 1.2rem;
+    }
+
+    .fecha-modal {
+        font-size: 1rem;
+    }
+
+    .btn-modal {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .booking-modal {
+        margin: 0 55px;
+    }
+
+    .title-modal {
+        font-size: 1rem;
+    }
+
+    .fecha-modal {
+        font-size: 0.9rem;
+    }
+
+    .btn-modal {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
     }
 }

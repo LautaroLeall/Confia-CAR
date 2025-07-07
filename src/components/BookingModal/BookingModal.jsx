@@ -37,7 +37,7 @@ const BookingModal = ({ car, onClose, onConfirm }) => {
                     <label className="form-label">Fecha de Retiro</label>
                     <input
                         type="date"
-                        className="form-control mb-3 w-50 text-center"
+                        className="form-control fecha-modal mb-3 w-50 text-center"
                         min={today}
                         value={startDate}
                         onChange={(e) => setStartDate(e.target.value)}
@@ -46,7 +46,7 @@ const BookingModal = ({ car, onClose, onConfirm }) => {
                     <label className="form-label">Fecha de Entrega</label>
                     <input
                         type="date"
-                        className="form-control mb-4 w-50 text-center"
+                        className="form-control fecha-modal mb-4 w-50 text-center"
                         min={startDate || today}
                         value={endDate}
                         onChange={(e) => setEndDate(e.target.value)}
