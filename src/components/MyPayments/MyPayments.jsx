@@ -16,12 +16,12 @@ const MyPayments = () => {
         <div className="container-pagos d-flex flex-column">
             <div className="container-myPayments">
                 <h2 className="title-pagos text-center">MIS PAGOS</h2>
-                <p className="text-center text-muted fw-bold mb-5">
+                <p className=" subtitle-payments text-center">
                     Autos ya pagados {user?.name ? `por ${user.name}` : ""}
                 </p>
 
                 {paidCars.length === 0 ? (
-                    <div className="text-center mt-5 fst-italic">
+                    <div className="empty-payments text-center fst-italic">
                         Aún no pagaste ningún auto. ¡Volvé cuando estés listo para acelerar!
                     </div>
                 ) : (

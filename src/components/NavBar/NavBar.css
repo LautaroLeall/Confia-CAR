@@ -74,6 +74,7 @@
     .nav {
         align-items: start;
         margin: 20px;
+        z-index: 100;
     }
 
     .nav-menu {
@@ -94,10 +95,15 @@
         opacity: 1;
         padding: 1em;
         pointer-events: auto;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(30, 30, 30, 0.8);
+        z-index: 100;
     }
 
     .nav-logo {
+        font-size: 26px;
+    }
+
+    .nav-logo:hover {
         font-size: 26px;
     }
 

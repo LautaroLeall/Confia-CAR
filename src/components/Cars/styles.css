@@ -141,6 +141,10 @@
         bottom: -10px;
         font-size: 0.8rem;
     }
+
+    .blur-spot {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {

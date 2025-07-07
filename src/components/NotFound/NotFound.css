@@ -81,3 +81,71 @@
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .notfound-container {
+        height: 100vh;
+    }
+
+    .notfound-content {
+        margin-top: 0rem;
+        margin-bottom: 45%;
+        max-width: auto;
+    }
+
+    .neon-text {
+        font-size: 6rem;
+    }
+
+    .notfound-message {
+        letter-spacing: 0.2em;
+        font-size: 1.2rem;
+    }
+
+    .notfound-sub {
+        font-size: 0.9rem;
+    }
+
+    .car-wrapper {
+        width: 80%;
+        height: auto;
+    }
+
+    .btn-back {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .notfound-container {
+        height: 100vh;
+    }
+
+    .notfound-content {
+        margin-bottom: 30%;
+    }
+
+    .neon-text {
+        font-size: 5rem;
+    }
+
+    .notfound-message {
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+    }
+
+    .notfound-sub {
+        font-size: 0.8rem;
+    }
+
+    .car-wrapper {
+        width: 50%;
+        height: auto;
+    }
+
+    .btn-back {
+        font-size: 0.7rem;
+    }
+}
