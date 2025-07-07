@@ -50,14 +50,14 @@ const CarDetail = () => {
     };
 
     return (
-        <div className="car-detail-container d-flex flex-column align-items-center">
-            <div className="car-detail-card align-items-center">
+        <div className="car-detail-container">
+            <div className="car-detail-card">
                 <div className="car-img-detalles">
                     <img src={car.image} alt={car.name} className="car-detail-img" />
                 </div>
                 <div className="car-detail-info">
                     <div className="card-inner text-center">
-                        <h1>{car.name}</h1>
+                        <h1 className="title-carDetail">{car.name}</h1>
                         <p className="text-primary mb-1">
                             {car.type} - {car.year}
                         </p>
@@ -85,12 +85,12 @@ const CarDetail = () => {
                         </div>
                     </div>
 
-                    <div className="description-car mb-4 text-center">
-                        <h3 className="text-success price-description">${car.price}/DAY</h3>
+                    <div className="description-car text-center">
+                        <span className="text-success price-description">${car.price}/DAY</span>
                         <p className="description">{car.description}</p>
                     </div>
 
-                    <div className="btns-detail d-flex justify-content-center gap-5">
+                    <div className="btns-detail">
                         <button className="btn btn-outline-success" onClick={handleReserve}>
                             Reservar Ahora
                         </button>

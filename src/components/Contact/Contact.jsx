@@ -43,13 +43,9 @@ const Contact = () => {
 
         <div className="d-flex justify-content-center">
           <div
-            className="position-relative card glow-card text-center shadow border-0"
+            className="card-aboutMy card glow-card text-center shadow border-0"
             style={{
-              width: "22rem",
-              height: "28rem",
-              overflow: "hidden",
               transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-              transition: "transform 0.2s ease-out"
             }}
             ref={cardRef}
             onMouseEnter={() => setGlowVisible(true)}
@@ -66,8 +62,8 @@ const Contact = () => {
               />
             )}
 
-            <div className="card-body position-relative bg-white rounded-4">
-              <div className="img-info d-flex justify-content-around align-items-center mb-5">
+            <div className="card-body position-relative bg-white rounded-4 p-3">
+              <div className="img-info">
                 <img
                   src= { imgLau }
                   className="rounded-circle shadow mb-3"
@@ -82,7 +78,7 @@ const Contact = () => {
               <p className="card-text text-muted small px-3">
                 Apasionado por el código limpio, los sistemas escalables y la solución de problemas del mundo real con software elegante.
               </p>
-              <div className="d-flex justify-content-center gap-4 fs-5 mt-5 text-dark">
+              <div className="d-flex justify-content-center gap-4 fs-5 mt-3">
                 <a href="https://www.linkedin.com/in/lauldp/" className="hover-rise" target="_blank" rel="noreferrer">
                   <FaLinkedin />
                 </a>

@@ -5,7 +5,6 @@
     background: linear-gradient(to bottom, #333333, #ffffff);
     height: 95vh;
     width: 100%;
-    overflow: hidden;
 }
 
 .container {
@@ -22,6 +21,21 @@
 
 .text-aboutMy {
     letter-spacing: 0.1em;
+}
+
+.card-aboutMy {
+    position: relative;
+    width: 22rem;
+    height: auto;
+    overflow: hidden;
+    transition: transform 0.2s ease-out;
+}
+
+.img-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15%;
 }
 
 .card-title {
@@ -67,4 +81,86 @@
     color: #404040;
     transition: all 0.2s ease-in-out;
     transform: scale(1.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .container-contact {
+        height: 100vh;
+    }
+
+    .container {
+        margin-top: 7rem;
+    }
+
+    .title-contact {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0.2em;
+    }
+
+    .text-aboutMy {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        letter-spacing: 0;
+    }
+
+    .card-aboutMy {
+        height: 14rem;
+        overflow: hidden;
+        transition: transform 0.2s ease-out;
+        margin-bottom: 10%;
+    }
+
+    .img-info {
+        margin-bottom: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .second-title {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .card-text{
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-contact {
+        height: 100vh;
+    }
+
+    .container {
+        margin-top: 6rem;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .title-contact {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .text-aboutMy {
+        font-size: 0.9rem;
+    }
+
+    .card-body {
+        width: 100%;
+        height: 50px;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .second-title {
+        font-size: 0.8rem;
+    }
 }
