@@ -132,7 +132,6 @@
         font-size: 0.9rem;
         padding: 0.5rem;
         border-radius: 0.5rem;
-        transition: 0.5s;
         justify-content: center;
     }
 
@@ -140,6 +139,12 @@
         position: absolute;
         bottom: -10px;
         font-size: 0.8rem;
+    }
+
+    .text-description:hover {
+        border: none;
+        transform: scale(1);
+        background-color: transparent;
     }
 
     .blur-spot {
