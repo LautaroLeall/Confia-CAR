@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// src/components/BookingModal/BookingProvider.jsx
+import { useState, useEffect } from "react";
 import { BookingContext } from "./BookingContext";
 
 // guardar las fechas también en el Context

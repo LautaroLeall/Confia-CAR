@@ -1,5 +1,5 @@
 // src/components/Cars/Card.jsx
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { BsPeopleFill, BsFuelPump } from "react-icons/bs";
 import { FaCar, FaMapMarkerAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";

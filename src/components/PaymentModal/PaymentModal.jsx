@@ -1,5 +1,5 @@
 // src/components/PaymentModal/PaymentModal.jsx
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import Swal from "sweetalert2";
 import { FaCreditCard, FaCalendarAlt, FaLock } from "react-icons/fa";

@@ -1,3 +1,4 @@
+// src/components/Background/Background.jsx
 import './Background.css'
 import video1 from '../../assets/inicio/video1.mp4'
 import image1 from '../../assets/inicio/image1.png'

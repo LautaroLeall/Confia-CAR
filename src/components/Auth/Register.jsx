@@ -1,5 +1,5 @@
 // src/components/Auth/Register.jsx
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import registerImage from '/public/register_car.png';
 import "./Register.css";

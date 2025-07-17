@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// src/context/AuthProvider.jsx
+import { useState, useEffect } from "react";
 import { AuthContext } from "./AuthContext";
 
 const AuthProvider = ({ children }) => {

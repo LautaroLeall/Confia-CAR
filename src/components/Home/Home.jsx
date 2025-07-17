@@ -1,5 +1,5 @@
-// Home.jsx
-import React, { useState } from 'react';
+// src/components/Home/Home.jsx
+import { useState } from 'react';
 import { FaSearch, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
