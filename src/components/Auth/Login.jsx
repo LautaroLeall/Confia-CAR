@@ -1,16 +1,16 @@
 // src/components/Auth/Login.jsx
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import loginImage from '/public/login_car.png';
+import loginImage from "/public/login_car.png";
 import "./Login.css";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
-    const [email, setEmail] = useState("");
+    const [identifier, setIdentifier] = useState(""); // puede ser mail o nombre
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-    const { login } = useContext(AuthContext); // login del contexto
+    const { login } = useContext(AuthContext);
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -18,11 +18,13 @@ const Login = () => {
         const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
 
         const matchedUser = storedUsers.find(
-            (user) => user.email === email && user.password === password
+            (user) =>
+                (user.email === identifier || user.name === identifier) &&
+                user.password === password
         );
 
         if (matchedUser) {
-            login(matchedUser); // guardamos el usuario en context
+            login(matchedUser);
             Swal.fire({
                 icon: "success",
                 title: "Inicio de sesión exitoso",
@@ -37,7 +39,7 @@ const Login = () => {
             Swal.fire({
                 icon: "error",
                 title: "Error de inicio de sesión",
-                text: "Usuario o contraseña incorrectos",
+                text: "Usuario, correo o contraseña incorrectos",
             });
         }
     };
@@ -47,10 +49,10 @@ const Login = () => {
             <form className="login-form d-flex flex-column" onSubmit={handleLogin}>
                 <h2>INICIAR SESIÓN</h2>
                 <input
-                    type="email"
-                    placeholder="Correo electrónico"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    placeholder="Usuario o Correo electrónico"
+                    value={identifier}
+                    onChange={(e) => setIdentifier(e.target.value)}
                     required
                 />
                 <input

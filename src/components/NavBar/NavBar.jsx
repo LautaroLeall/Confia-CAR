@@ -15,7 +15,7 @@ const NavBar = () => {
     return (
         <div className='nav d-flex align-items-center justify-content-between'>
             <div className='nav-logo'>
-                <Link to="/" onClick={closeMenu}>CONFIA CAR</Link> {/*  Cierra al ir al inicio */}
+                <Link to="/" onClick={closeMenu}>CONFIA CAR</Link>
             </div>
 
             <div className="nav-toggle d-lg-none" onClick={toggleMenu}>
@@ -23,11 +23,19 @@ const NavBar = () => {
             </div>
 
             <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
-                <li><Link to="/home" onClick={closeMenu}>Inicio</Link></li>
-                <li><Link to="/cars" onClick={closeMenu}>Autos</Link></li>
-                <li><Link to="/myBookings" onClick={closeMenu}>Mis Reservas</Link></li>
-                {user && <li><Link to="/myPayments" onClick={closeMenu}>Mis Pagos</Link></li>}
-                
+                <li className="nav-item">
+                    <Link to="/home" onClick={closeMenu}>Inicio</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/cars" onClick={closeMenu}>Autos</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/myBookings" onClick={closeMenu}>Mis Reservas</Link>
+                </li>
+                {user && <li className="nav-item">
+                    <Link to="/myPayments" onClick={closeMenu}>Mis Pagos</Link>
+                </li>}
+
                 <div className="contact-auth d-flex align-items-center gap-5">
                     <li className='nav-contact'>
                         <Link to="/contact" onClick={closeMenu}>Contacto</Link>
@@ -35,11 +43,11 @@ const NavBar = () => {
 
                     {user ? (
                         <div className="d-flex align-items-center">
-                            <button 
+                            <button
                                 onClick={() => {
                                     logout();
                                     closeMenu(); //  lo cerramos al cerrar sesión (mobile)
-                                }} 
+                                }}
                                 className="btn btn-logout btn-sm"
                             >
                                 Cerrar Sesión
@@ -47,12 +55,12 @@ const NavBar = () => {
                         </div>
                     ) : (
                         <div className="d-flex gap-5">
-                            <li>
+                            <li className='nav-item'>
                                 <Link to="/register" title="Registrarse" className="nav-icon" onClick={closeMenu}>
                                     <FaUserPlus />
                                 </Link>
                             </li>
-                            <li>
+                            <li className='nav-item'>
                                 <Link to="/login" title="Iniciar Sesión" className="nav-icon" onClick={closeMenu}>
                                     <FaSignInAlt />
                                 </Link>
