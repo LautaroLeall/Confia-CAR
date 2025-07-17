@@ -2,20 +2,21 @@
 .nav {
     margin: 20px 100px;
     color: rgb(200, 200, 200);
-    animation: fadeSlideDown 0.7s ease-in-out;
 }
 
+/* clase aplicada cuando cambia la ruta (por key), para animación suave */
 .fade-down {
     animation: fadeSlideDown 0.7s ease-in-out;
 }
 
-/* LOGO CON GRADIENTE Y TRANSICIÓN */
+/* LOGO CON GRADIENTE Y TRANSICIÓN DE COLOR */
 .nav-logo {
     font-size: 32px;
     font-weight: bold;
     font-family: Outfit;
     letter-spacing: 1px;
 
+    /* Efecto de degradado horizontal */
     background: linear-gradient(to right, black 50%, rgb(200, 200, 200) 50%);
     background-size: 200% 100%;
     background-position: 100% 0;
@@ -51,6 +52,7 @@
     cursor: pointer;
 }
 
+/* Línea que aparece debajo al hacer hover */
 .nav-item::after {
     content: "";
     position: absolute;
@@ -135,6 +137,7 @@
         z-index: 100;
         border-radius: 10px;
         animation: slideFadeIn 0.4s ease-in-out;
+        /* entrada suave para menú móvil */
     }
 
     .nav-logo {
@@ -174,7 +177,7 @@
 }
 
 /* ANIMACIONES PERSONALIZADAS */
-/* Reutilizada para animación en cambio de rutas */
+/* Fade desde arriba (usada al cambiar ruta con fade-down) */
 @keyframes fadeSlideDown {
     0% {
         opacity: 0;
@@ -187,7 +190,7 @@
     }
 }
 
-/* Menú hamburguesa al abrirse */
+/* Menú hamburguesa (mobile) */
 @keyframes slideFadeIn {
     0% {
         opacity: 0;

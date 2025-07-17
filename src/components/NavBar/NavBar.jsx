@@ -1,30 +1,26 @@
 // src/components/NavBar/NavBar.jsx
 import { Link, useLocation } from 'react-router-dom';
 import { FaSignInAlt, FaUserPlus, FaBars } from 'react-icons/fa';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import './NavBar.css';
 
 const NavBar = () => {
     const { user, logout } = useContext(AuthContext);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [animate, setAnimate] = useState(true); // Estado para reiniciar animación
-    const location = useLocation(); // Para detectar cambio de ruta
+    const location = useLocation(); // Detectamos el cambio de ruta
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
-    const closeMenu = () => setMenuOpen(false); // Nueva función
-
-    //  Reinicia animación en cada ruta
-    useEffect(() => {
-        setAnimate(false);
-        const timeout = setTimeout(() => setAnimate(true), 10); // reinicia la animación
-        return () => clearTimeout(timeout);
-    }, [location.pathname]);
+    const closeMenu = () => setMenuOpen(false); // Cierra el menú al hacer clic
 
     return (
-        <div className={`nav d-flex align-items-center justify-content-between ${animate ? 'fade-down' : ''}`}>
+        // La key hace que este div se "remonte" cada vez que cambia la ruta, reiniciando la animación
+        <div
+            key={location.pathname}
+            className="nav d-flex align-items-center justify-content-between fade-down"
+        >
             <div className='nav-logo'>
-                <Link to="/" onClick={closeMenu}>CONFIA CAR</Link> {/*  Cierra al ir al inicio */}
+                <Link to="/" onClick={closeMenu}>CONFIA CAR</Link> {/* Cierra al ir al inicio */}
             </div>
 
             <div className="nav-toggle d-lg-none" onClick={toggleMenu}>
@@ -57,7 +53,7 @@ const NavBar = () => {
                             <button
                                 onClick={() => {
                                     logout();
-                                    closeMenu(); // Lo cerramos al cerrar sesión (mobile)
+                                    closeMenu(); // Cierra el menú (mobile) al cerrar sesión
                                 }}
                                 className="btn btn-logout btn-sm"
                             >
