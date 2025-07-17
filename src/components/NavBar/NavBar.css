@@ -5,30 +5,30 @@
     animation: fadeSlideDown 0.7s ease-in-out;
 }
 
+.fade-down {
+    animation: fadeSlideDown 0.7s ease-in-out;
+}
+
+/* LOGO CON GRADIENTE Y TRANSICIÓN */
 .nav-logo {
     font-size: 32px;
     font-weight: bold;
     font-family: Outfit;
     letter-spacing: 1px;
-    /* Degradado horizontal de color que se mueve con el hover */
+
     background: linear-gradient(to right, black 50%, rgb(200, 200, 200) 50%);
     background-size: 200% 100%;
     background-position: 100% 0;
-    /* Aplica el degradado como color del texto */
     -webkit-background-clip: text;
-    /* Chrome, Safari, Edge */
     background-clip: text;
-    /* Estándar */
     -webkit-text-fill-color: transparent;
-    /* Hace que el texto sea transparente para ver el fondo */
-    /* Transición suave del degradado al hacer hover */
+
     transition: background-position 0.4s ease;
 }
 
 .nav-logo:hover {
     background-position: 0 0;
 }
-
 
 /* MENÚ PRINCIPAL */
 .nav-menu {
@@ -66,7 +66,7 @@
     width: 100%;
 }
 
-/* CONTACTO / ICONOS / BOTÓN  */
+/* CONTACTO / ICONOS / BOTÓN */
 .nav-contact {
     background-color: rgba(255, 255, 255, 0.250);
     border-radius: 50px;
@@ -135,7 +135,6 @@
         z-index: 100;
         border-radius: 10px;
         animation: slideFadeIn 0.4s ease-in-out;
-        /* NUEVO: entrada suave para menú móvil */
     }
 
     .nav-logo {
@@ -175,7 +174,7 @@
 }
 
 /* ANIMACIONES PERSONALIZADAS */
-/* Aparece desde arriba suavemente */
+/* Reutilizada para animación en cambio de rutas */
 @keyframes fadeSlideDown {
     0% {
         opacity: 0;
@@ -188,7 +187,7 @@
     }
 }
 
-/* Entrada móvil del menú hamburguesa */
+/* Menú hamburguesa al abrirse */
 @keyframes slideFadeIn {
     0% {
         opacity: 0;
