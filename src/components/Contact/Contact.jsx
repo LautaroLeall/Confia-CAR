@@ -1,5 +1,5 @@
-// Contact.jsx
-import React, { useRef, useState } from "react";
+// src/components/Contact/Contact.jsx
+import { useRef, useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { AiFillInstagram } from "react-icons/ai";
 import imgLau from "/public/logo-lldp.png";

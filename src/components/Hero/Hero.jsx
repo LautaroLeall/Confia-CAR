@@ -1,3 +1,4 @@
+// src/components/Hero/Hero.jsx
 import { Link } from 'react-router-dom';
 import './Hero.css'
 import arrow_btn from '../../assets/inicio/arrow_btn.png'

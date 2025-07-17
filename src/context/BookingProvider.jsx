@@ -1,5 +1,5 @@
-// BookingProvider.jsx
-import React, { useState, useEffect } from "react";
+// /src/context/BookingProvider.jsx
+import { useState, useEffect } from "react";
 import { BookingContext } from "./BookingContext";
 
 const BookingProvider = ({ children }) => {
