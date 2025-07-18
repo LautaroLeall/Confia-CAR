@@ -1,7 +1,7 @@
 // src/components/Auth/Login.jsx
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import loginImage from "/public/login_car.png";
+import loginImage from "/public/auth/login_car.png";
 import "./Login.css";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../context/AuthContext";

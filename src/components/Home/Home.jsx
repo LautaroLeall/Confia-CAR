@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import carsData from '../../api/carsData';
 import './Home.css';
-import carImage from '/public/main_car.png';
+import carImage from '/public/home/main_car.png';
 
 const Home = () => {
   const navigate = useNavigate();

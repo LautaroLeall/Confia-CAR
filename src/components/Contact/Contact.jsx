@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { AiFillInstagram } from "react-icons/ai";
-import imgLau from "/public/logo-lldp.png";
+import imgLau from "/public/logo/logo-lldp.png";
 import "./Contact.css";
 
 const Contact = () => {
