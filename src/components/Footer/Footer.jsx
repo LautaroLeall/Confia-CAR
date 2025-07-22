@@ -5,6 +5,8 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
+// NO ESTA ACTIVO
+
 const Footer = () => {
     return (
         <footer className="footer mt-auto d-flex flex-column">

@@ -1,7 +1,7 @@
 // src/components/Auth/Register.jsx
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import registerImage from '/public/register_car.png';
+import registerImage from '/public/auth/register_car.png';
 import "./Register.css";
 import Swal from "sweetalert2";
 

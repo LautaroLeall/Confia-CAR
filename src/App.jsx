@@ -8,6 +8,7 @@ const App = () => {
   const location = useLocation();
 
   // Rutas que muestran contenido especial como navbar
+  // para no mostrar en el 404 
   const rutasConLayout = [
     "/", "/home", "/cars", "/contact",
     "/login", "/register", "/myBookings", "/myPayments"

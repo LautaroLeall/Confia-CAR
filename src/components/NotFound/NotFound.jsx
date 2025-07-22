@@ -1,7 +1,7 @@
 // src/components/NotFound/NotFound.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import perdidoImage from "/public/auto_perdido.png";
+import perdidoImage from "/public/404/auto_perdido.png";
 import "./NotFound.css";
 
 const NotFound = () => {
