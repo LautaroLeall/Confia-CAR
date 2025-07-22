@@ -25,7 +25,7 @@ Aplicación web de alquiler de autos desarrollada en ReactJS. Permite a los usua
 - Registro de nuevos usuarios (guardado en `localStorage`)
 - Login persistente con verificación por email y contraseña
 - Logout inmediato con limpieza de sesión
-- Control de visibilidad para rutas protegidas (`/myBookings`, `/myPayments`)
+- Control de visibilidad para ruta protegida (`/myPayments`)
 - Cada usuario ve solamente sus autos reservados y pagados
 
 ---
@@ -68,7 +68,7 @@ CONFIA-CAR/
 │ │ ├── Auth/               # Login y Registro
 │ │ ├── Background/         # Fondo visual
 │ │ ├── BookingModal/       # Modal para reservar autos
-│ │ ├── CarDetail/          # Página de detalle de un auto
+│ │ ├── CarDetail/          # Página de detalle de cada auto
 │ │ ├── Cars/               # Carrusel y Cards
 │ │ ├── Contact/            # Página de contacto
 │ │ ├── Footer/
@@ -79,27 +79,14 @@ CONFIA-CAR/
 │ │ ├── NavBar/
 │ │ ├── NotFound/
 │ │ └── PaymentModal/       # Modal de simulación de pago
+│ ├── container/            # Contenedor de la página principal
 │ ├── context/              # AuthContext y BookingContext
 │ ├── routes/               # Definición de rutas protegidas y públicas
 │ ├── App.jsx
 │ ├── main.jsx
 │ └── index.css
 ├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
 ```
-
----
-
-## 📱 Diseño Responsive
-
-Todos los componentes están adaptados a dispositivos móviles y tablets mediante:
-
-- Media Queries personalizados
-- Bootstrap Grid System
-- Eliminación de efectos `:hover` en pantallas pequeñas
-- Diseño fluido y centrado en UX móvil
 
 ---
 
