@@ -85,7 +85,7 @@ CONFIA-CAR/
 │ ├── App.jsx
 │ ├── main.jsx
 │ └── index.css
-├── index.html
+└── index.html
 ```
 
 ---
